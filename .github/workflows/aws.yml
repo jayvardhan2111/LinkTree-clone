@@ -9,6 +9,18 @@ on:
 
 
 jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Build
+      run: |
+        echo "Hello World : Build"
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
@@ -20,6 +32,6 @@ jobs:
 
     - name: Build
       run: |
-        echo "Hello World"
+        echo "Hello World : Deploy"
 
   
